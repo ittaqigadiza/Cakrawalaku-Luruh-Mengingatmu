@@ -130,13 +130,18 @@ margin:80px auto 120px auto;
 }
 
 .next-btn{
+  background:#d4af37;   /* emas */
+  color:#1a1a1a;
   text-decoration:none;
-  color:#000;
-  padding:10px 20px;
-  border-radius:12px;
-  text-decoration:none;
+  padding:12px 24px;
+  border-radius:16px;
+  font-family: "Playfair Display", serif;
+  font-size:18px;
 }
 
+.next-btn:hover{
+  background:#c39b2e;
+}
 .ep-btn{
 background:#d4af37;
 color:#0b1c3d;
@@ -252,6 +257,7 @@ border:none;
 color:white;
 cursor:pointer;
 }
+
 
 
 
