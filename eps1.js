@@ -41,10 +41,10 @@ viewer.style.display = "none";
 }
 };
   
-if (window.location.pathname.endsWith(".html")) {
-  const clean = window.location.pathname.replace(".html", "");
-  window.history.replaceState({}, "", clean);
-}
+const page = location.pathname.replace("/", "");
+if (!page) return;
+window.location.href = "eps" + page + ".html";
 
 });
+
 
