@@ -119,6 +119,23 @@ max-width:700px;
 margin:80px auto 120px auto;
 }
 
+.nav-episode{
+  display:flex;
+  margin-top:40px;
+}
+
+.nav-episode.first{
+  justify-content:flex-end;
+}
+
+.next-btn{
+  background:#f2e6c9;
+  padding:10px 20px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#333;
+}
+
 .ep-btn{
 background:#d4af37;
 color:#0b1c3d;
@@ -234,3 +251,4 @@ border:none;
 color:white;
 cursor:pointer;
 }
+
