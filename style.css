@@ -33,6 +33,10 @@ margin:auto;
 padding:20px;
 }
 
+body{
+  user-select: none;
+}
+
 .section-title{
 text-align:center;
 color:#d4af37;
@@ -335,4 +339,5 @@ left:-40px;
 body::after{
 right:-40px;
 transform:scaleX(-1);
+
 }
