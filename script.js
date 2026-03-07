@@ -22,6 +22,5 @@ document.addEventListener("DOMContentLoaded", function () {
       viewer.style.display = "none";
     }
   };
+
 });
-
-
