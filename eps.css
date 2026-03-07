@@ -130,14 +130,12 @@ margin:80px auto 120px auto;
 }
 
 .next-btn{
-  background:#d4af37;   /* emas */
+  background:#d4af37;
   color:#1a1a1a;
-  text-decoration:none;
   padding:12px 24px;
   border-radius:16px;
-  font-family: "Playfair Display", serif;
-  font-size:18px;
-}
+  text-decoration:none;
+}}
 
 .next-btn:hover{
   background:#c39b2e;
@@ -257,6 +255,7 @@ border:none;
 color:white;
 cursor:pointer;
 }
+
 
 
 
