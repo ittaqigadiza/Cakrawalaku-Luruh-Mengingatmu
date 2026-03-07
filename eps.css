@@ -116,7 +116,7 @@ transform:scale(1.05);
 display:flex;
 justify-content:space-between;
 max-width:700px;
-color:#0b1c3d;
+background:#d4af37;
 margin:80px auto 120px auto;
 }
 
@@ -130,7 +130,7 @@ margin:80px auto 120px auto;
 }
 
 .next-btn{
-  background:#f2e6c9;
+background:#d4af37;
   padding:10px 20px;
   border-radius:12px;
   text-decoration:none;
@@ -252,5 +252,6 @@ border:none;
 color:white;
 cursor:pointer;
 }
+
 
 
