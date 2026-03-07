@@ -3,6 +3,21 @@
 
 <head>
 
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e){
+  if((e.ctrlKey || e.metaKey) && 
+     (e.key === "c" || e.key === "u" || e.key === "s")){
+    e.preventDefault();
+  }
+});
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -219,3 +234,4 @@ PRAKATA & PERNYATAAN KARYA
 
 </body>
 </html>
+
