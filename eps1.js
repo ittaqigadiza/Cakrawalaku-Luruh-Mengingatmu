@@ -40,11 +40,8 @@ if (e.target === viewer) {
 viewer.style.display = "none";
 }
 };
-  
-const page = location.pathname.replace("/", "");
-if (!page) return;
-window.location.href = "eps" + page + ".html";
 
 });
+
 
 
