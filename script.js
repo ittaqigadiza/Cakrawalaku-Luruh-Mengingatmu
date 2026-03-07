@@ -22,9 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
       viewer.style.display = "none";
     }
   };
-if (location.pathname.endsWith(".html")) {
-  const newUrl = location.pathname.replace(".html", "");
-  history.replaceState({}, "", newUrl);
+if (window.location.pathname.endsWith(".html")) {
+  const clean = window.location.pathname.replace(".html", "");
+  window.history.replaceState({}, "", clean);
 }
 
 });
+
