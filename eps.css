@@ -300,25 +300,25 @@ border-radius:14px;
 
 .viewer-prev,
 .viewer-next{
-top:50%;
-transform:translateY(-50%);
-bottom:auto;
+top:auto;
+bottom:30px;
+transform:none;
 font-size:24px;
-padding:10px 14px;
+padding:12px 16px;
 background:rgba(212,175,55,0.95);
 color:#0b1c3d;
 border-radius:12px;
 }
 
 .viewer-prev{
-left:20px;
+left:25px;
 }
 
 .viewer-next{
-right:20px;
+right:25px;
 }
 
-#viewer-close{
+.close-btn{
 top:18px;
 right:18px;
 font-size:20px;
@@ -329,5 +329,4 @@ padding:5px 10px;
 align-items:center;
 }
 
-
-
+}
