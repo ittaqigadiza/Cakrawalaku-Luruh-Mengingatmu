@@ -112,11 +112,19 @@ font-weight:bold;
 transform:scale(1.05);
 }
 
-.nav-episode{
+.nav-episode,
+.nav-episode1{
 display:flex;
-justify-content:space-between;
 max-width:700px;
 margin:80px auto 120px auto;
+}
+
+.nav-episode{
+justify-content:space-between;
+}
+
+.nav-episode1{
+justify-content:flex-end;
 }
 
 .ep-btn{
