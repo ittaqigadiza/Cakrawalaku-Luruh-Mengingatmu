@@ -352,3 +352,22 @@ opacity:1;
 transform:translateY(0);
 filter:blur(0);
 }
+
+img{
+user-select:none;
+-webkit-user-drag:none;
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+}
+
+.grid img,
+.grid2 img,
+.grid4 img,
+.cast-grid img,
+.banner img,
+.card img{
+user-select:none;
+-webkit-user-drag:none;
+pointer-events:auto;
+}
