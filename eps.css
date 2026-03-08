@@ -321,7 +321,7 @@ right:25px;
 
 .viewer-prev:active,
 .viewer-next:active{
-transform:translateY(-50%) scale(1.15);
+transform:scale(1.15);
 }
 
 .close-btn{
@@ -335,6 +335,13 @@ padding:5px 10px;
 align-items:center;
 }
 
+
+.close-btn{
+top:18px;
+right:18px;
+font-size:20px;
+padding:5px 10px;
 }
+
 
 
