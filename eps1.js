@@ -2,43 +2,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const viewer = document.getElementById("viewer");
 const viewerImg = document.getElementById("viewer-img");
-
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-const close = document.getElementById("close");
+const closeBtn = document.getElementById("viewer-close");
 
 const images = document.querySelectorAll(".grid2 img, .grid4 img");
 
-let index = 0;
-
-images.forEach((img, i) => {
-img.addEventListener("click", () => {
-viewer.style.display = "flex";
+images.forEach(img=>{
+img.addEventListener("click",()=>{
+if(viewer){
+viewer.style.display="flex";
 viewerImg.src = img.src;
-index = i;
+}
 });
 });
 
-next.onclick = () => {
-index++;
-if (index >= images.length) index = 0;
-viewerImg.src = images[index].src;
+if(closeBtn){
+closeBtn.onclick=()=>{
+viewer.style.display="none";
 };
+}
 
-prev.onclick = () => {
-index--;
-if (index < 0) index = images.length - 1;
-viewerImg.src = images[index].src;
-};
-
-close.onclick = () => {
-viewer.style.display = "none";
-};
-
-viewer.onclick = (e) => {
-if (e.target === viewer) {
-viewer.style.display = "none";
+if(viewer){
+viewer.onclick=(e)=>{
+if(e.target===viewer){
+viewer.style.display="none";
 }
 };
+}
+
+const elements = document.querySelectorAll(
+"header h1, .banner, .part-title, .grid2 img, .grid4 img"
+);
+
+elements.forEach(el=>{
+el.classList.add("reveal");
+});
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}else{
+entry.target.classList.remove("show");
+}
+});
+},{
+threshold:0.25,
+rootMargin:"0px 0px -120px 0px"
+});
+
+elements.forEach(el=>{
+observer.observe(el);
+});
 
 });
