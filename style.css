@@ -332,11 +332,14 @@ user-select:none;
 
 @media (max-width:768px){
 
-#prakata,
 #cast,
 #sinopsis,
 #episode{
 scroll-margin-top:180px;
+
+#prakata{
+scroll-margin-top:200px;
+}
 }
 
 }
