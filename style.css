@@ -266,9 +266,12 @@ scroll-behavior:smooth;
 
 #poster{scroll-margin-top: 250px;}
 #cast{scroll-margin-top:25px;}
-#sinopsis{scroll-margin-top:30px;}
-#prakata{scroll-margin-top:30px;}
-#episode{scroll-margin-top:30px;}
+
+#sinopsis,
+#prakata,
+#episode{
+scroll-margin-top:30px;
+}
 
 .section-ornament{
 position:relative;
@@ -329,6 +332,15 @@ user-select:none;
 
 @media (max-width:768px){
 
+#prakata,
+#cast,
+#sinopsis,
+#episode{
+scroll-margin-top:180px;
+}
+
+}
+
 body{overflow-x:hidden;}
 
 .container{
@@ -383,6 +395,4 @@ max-width:160px;
 body::before,
 body::after{
 width:80px;
-}
-
 }
