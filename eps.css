@@ -215,8 +215,6 @@ border-radius:14px;
 box-shadow:0 0 40px rgba(0,0,0,0.8);
 }
 
-/* tombol viewer diperbaiki */
-
 .viewer-prev,
 .viewer-next{
 position:absolute;
@@ -332,8 +330,6 @@ font-size:20px;
 padding:5px 10px;
 }
 
-@media (max-width:768px){
-
 .viewer{
 align-items:center;
 }
@@ -360,5 +356,4 @@ left:10px;
 right:10px;
 }
 
-}
 }
