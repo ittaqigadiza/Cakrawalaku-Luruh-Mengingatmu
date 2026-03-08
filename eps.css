@@ -129,48 +129,6 @@ margin:80px auto 120px auto;
   justify-content:flex-end;
 }
 
-.next-btn{
-  background:#d4af37;
-  color:#1a1a1a;
-  padding:12px 24px;
-  border-radius:16px;
-  text-decoration:none;
-}
-
-.nav-episode{
-  display:flex;
-  justify-content:space-between;
-  margin-top:40px;
-}
-
-.nav-btn{
-  background:#d4af37;
-  color:#1a1a1a;
-  padding:12px 24px;
-  border-radius:16px;
-  text-decoration:none;
-  font-family:"Playfair Display", serif;
-}
-
-.nav-btn:hover{
-  background:#c89f2c;
-}
-
-.ep-btn{
-background:#d4af37;
-color:#0b1c3d;
-padding:12px 26px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-transition:0.25s;
-}
-
-.ep-btn:hover{
-transform:scale(1.07);
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
-
 .viewer{
 position:fixed;
 top:0;
@@ -271,6 +229,7 @@ border:none;
 color:white;
 cursor:pointer;
 }
+
 
 
 
