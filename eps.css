@@ -126,7 +126,19 @@ margin:80px auto 120px auto;
 }
 
 .nav-episode.first{
-  justify-content:flex-end;
+display:flex;
+justify-content:flex-end;
+margin-top:40px;
+}
+
+.next-btn{
+background:#d4af37;
+color:#0b1c3d;
+padding:12px 26px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
 }
 
 .viewer{
@@ -229,6 +241,7 @@ border:none;
 color:white;
 cursor:pointer;
 }
+
 
 
 
