@@ -2,9 +2,14 @@ body{
 margin:0;
 font-family:"Crimson Text",serif;
 background:
-radial-gradient(circle at 20% 10%, rgba(236, 202, 91, 0.15), transparent 40%),
+radial-gradient(circle at 20% 10%, rgba(236,202,91,0.15), transparent 40%),
 radial-gradient(circle at 80% 90%, rgba(212,175,55,0.08), transparent 40%),
 #04163a;
+}
+
+header{
+text-align:center;
+padding:60px 20px 30px;
 }
 
 header h1{
@@ -22,33 +27,15 @@ font-size:18px;
 opacity:0.85;
 }
 
-header{
-text-align:center;
-padding:60px 20px 30px;
-}
-
 .container{
 max-width:1200px;
 margin:auto;
 padding:20px;
 }
 
-body{
-  user-select: none;
-}
-
-.section-title{
-text-align:center;
-color:#d4af37;
-font-family:"Playfair Display";
-font-size:32px;
-margin:70px 0 30px 0;
-letter-spacing:1px;
-}
-
 .card{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:100px;
 }
 
 .card img{
@@ -58,6 +45,16 @@ display:block;
 margin:auto;
 border-radius:18px;
 box-shadow:0 12px 35px rgba(0,0,0,0.6);
+opacity:0;
+transform:translateY(60px) scale(.97);
+filter:blur(4px);
+transition:opacity .8s ease, transform .8s ease, filter .8s ease;
+}
+
+.card img.show{
+opacity:1;
+transform:translateY(0) scale(1);
+filter:blur(0);
 }
 
 .cast-grid{
@@ -107,41 +104,34 @@ justify-items:center;
 text-decoration:none;
 color:white;
 text-align:center;
-transition:0.3s;
 width:100%;
 line-height:1.4;
 display:block;
 max-width:230px;
-transition:transform .3s ease;
-}
-
-.episode-card:hover img{
-transform:scale(1.05);
-transform:scale(1.1) translateY(-6px);
+transition:transform .3s ease, box-shadow .3s ease;
 }
 
 .episode-card img{
 width:100%;
 border-radius:20px;
 box-shadow:0 16px 45px rgba(0,0,0,0.75);
-transition:transform 0.3s ease;
+transition:transform .3s ease;
 }
 
-.episode-title{
-margin-top:10px;
-font-size:17px;
+.episode-card:hover img{
+transform:scale(1.1) translateY(-6px);
+}
+
+.episode-card:hover{
+transform:translateY(-6px) scale(1.08);
+box-shadow:0 20px 50px rgba(212,175,55,0.35);
 }
 
 footer{
 text-align:center;
-color: #d4af37;
+color:#d4af37;
 padding:40px;
 opacity:0.7;
-}
-
-.author{
-margin-top:8px;
-opacity:0.85;
 }
 
 .quote{
@@ -156,58 +146,13 @@ text-align:center;
 opacity:0.9;
 }
 
-.author{
-margin-top:8px;
-opacity:0.85;
-font-size:18px;
-}
-
 .card img{
-transition:transform 0.35s ease, box-shadow 0.35s ease;
+transition:transform .35s ease, box-shadow .35s ease;
 }
 
 .card img:hover{
 transform:scale(1.05);
 box-shadow:0 18px 45px rgba(0,0,0,0.7);
-}
-
-.episode-card{
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.episode-card:hover{
-transform:translateY(-6px) scale(1.08);
-box-shadow:0 20px 50px rgba(212,175,55,0.35);
-}
-
-header{
-animation:fadeDown 1s ease;
-}
-
-.container{
-animation:fadeUp 1.2s ease;
-}
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 .viewer{
@@ -259,7 +204,7 @@ color:#d4af37;
 text-decoration:none;
 font-family:"Playfair Display";
 letter-spacing:1px;
-transition:0.3s;
+transition:.3s;
 backdrop-filter:blur(6px);
 }
 
@@ -273,17 +218,17 @@ scroll-behavior:smooth;
 }
 
 #poster{
-scroll-margin-top: 255px;
+scroll-margin-top:255px;
 }
 
-#cast,
+#cast{
+scroll-margin-top:70px;
+}
+
 #sinopsis,
-#episode{
-scroll-margin-top:90px;
-}
-
+#episode,
 #prakata{
-scroll-margin-top:90px;
+scroll-margin-top:70px;
 }
 
 .section-ornament{
@@ -325,7 +270,6 @@ height:100vh;
 width:160px;
 pointer-events:none;
 z-index:2;
-
 background:
 radial-gradient(120px 200px at 0% 20%, rgba(212,175,55,0.65), transparent 80%),
 radial-gradient(120px 200px at 0% 60%, rgba(212,175,55,0.65), transparent 80%),
@@ -339,5 +283,72 @@ left:-40px;
 body::after{
 right:-40px;
 transform:scaleX(-1);
+}
 
+.fade,
+.reveal,
+.card img,
+.grid img,
+.cast-grid img,
+.episode-card,
+header h1,
+.author,
+.quote{
+opacity:0;
+transform:translateY(45px);
+filter:blur(4px);
+transition:opacity .8s ease, transform .8s ease, filter .8s ease;
+}
+
+.fade.show,
+.reveal.show,
+.card img.show,
+.grid img.show,
+.cast-grid img.show,
+.episode-card.show,
+header h1.show,
+.author.show,
+.quote.show{
+opacity:1;
+transform:translateY(0);
+filter:blur(0);
+}
+
+
+.card img{
+transform:translateY(60px) scale(.97);
+}
+
+.card img:hover{
+transform:scale(1.05);
+}
+
+.section-title{
+opacity:0;
+transform:translateY(-35px);
+filter:blur(4px);
+transition:opacity .8s ease, transform .8s ease, filter .8s ease;
+}
+
+.section-title.show{
+opacity:1;
+transform:translateY(0);
+filter:blur(0);
+}
+
+.section-ornament{
+opacity:0;
+transform:translateY(-35px);
+filter:blur(4px);
+
+transition:
+opacity .8s ease,
+transform .8s ease,
+filter .8s ease;
+}
+
+.section-ornament.show{
+opacity:1;
+transform:translateY(0);
+filter:blur(0);
 }
