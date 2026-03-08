@@ -339,26 +339,10 @@ border-radius:12px;
 }
 
 .viewer-prev{
-left:10px;
-}
-
-.viewer-next{
-right:10px;
-}
-
-.nav-prev,
-.nav-next{
-position:fixed;
-bottom:30px;
-top:auto;
-transform:none;
-}
-
-.nav-prev{
 left:20px;
 }
 
-.nav-next{
+.viewer-next{
 right:20px;
 }
 
