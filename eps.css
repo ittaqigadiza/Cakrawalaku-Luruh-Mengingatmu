@@ -307,6 +307,7 @@ font-size:24px;
 padding:12px 16px;
 background:rgba(212,175,55,0.95);
 color:#0b1c3d;
+transition:transform .15s ease;
 border-radius:12px;
 }
 
@@ -316,11 +317,6 @@ left:25px;
 
 .viewer-next{
 right:25px;
-}
-
-.viewer-prev,
-.viewer-next{
-transition:transform .15s ease;
 }
 
 .viewer-prev:active,
@@ -340,4 +336,5 @@ align-items:center;
 }
 
 }
+
 
