@@ -116,29 +116,22 @@ transform:scale(1.05);
 display:flex;
 justify-content:space-between;
 max-width:700px;
-background:#d4af37;
 margin:80px auto 120px auto;
 }
 
-.nav-episode{
-  display:flex;
-  margin-top:40px;
-}
-
-.nav-episode.first{
-display:flex;
-justify-content:flex-end;
-margin-top:40px;
-}
-
-.next-btn{
+.ep-btn{
 background:#d4af37;
 color:#0b1c3d;
 padding:12px 26px;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
-display:inline-block;
+transition:0.25s;
+}
+
+.ep-btn:hover{
+transform:scale(1.07);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .viewer{
@@ -241,14 +234,4 @@ border:none;
 color:white;
 cursor:pointer;
 }
-
-
-
-
-
-
-
-
-
-
 
