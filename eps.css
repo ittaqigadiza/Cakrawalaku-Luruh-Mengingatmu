@@ -299,3 +299,37 @@ user-select:none;
 -webkit-user-drag:none;
 pointer-events:auto;
 }
+
+@media (max-width:768px){
+
+.viewer img{
+max-width:92%;
+max-height:70%;
+border-radius:14px;
+}
+
+.viewer-prev,
+.viewer-next{
+font-size:28px;
+padding:8px 12px;
+background:rgba(212,175,55,0.85);
+color:#0b1c3d;
+border-radius:8px;
+}
+
+.viewer-prev{
+left:10px;
+}
+
+.viewer-next{
+right:10px;
+}
+
+#viewer-close{
+top:18px;
+right:18px;
+font-size:20px;
+padding:5px 10px;
+}
+
+}
