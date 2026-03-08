@@ -17,11 +17,9 @@ header h1{
 font-family:"Playfair Display";
 font-size:42px;
 margin:0;
-
 opacity:0;
 transform:translateY(-40px);
 filter:blur(4px);
-
 transition:
 opacity .8s ease,
 transform .8s ease,
@@ -62,11 +60,9 @@ padding:20px;
 font-family:"Playfair Display";
 font-size:26px;
 margin:60px 0 25px;
-
 opacity:0;
 transform:translateY(-35px);
 filter:blur(4px);
-
 transition:
 opacity .8s ease,
 transform .8s ease,
@@ -83,11 +79,9 @@ filter:blur(0);
 display:flex;
 justify-content:center;
 margin-top:40px;
-
 opacity:0;
 transform:translateY(80px) scale(.95);
 filter:blur(4px);
-
 transition:
 opacity .9s ease,
 transform .9s ease,
@@ -122,11 +116,9 @@ width:100%;
 border-radius:16px;
 box-shadow:0 12px 35px rgba(0,0,0,0.6);
 cursor:pointer;
-
 opacity:0;
 transform:translateY(60px) scale(.96);
 filter:blur(4px);
-
 transition:
 opacity .8s ease,
 transform .8s ease,
@@ -339,10 +331,8 @@ align-items:center;
 top:50%;
 transform:translateY(-50%);
 bottom:auto;
-
 font-size:24px;
 padding:10px 14px;
-
 background:rgba(212,175,55,0.95);
 color:#0b1c3d;
 border-radius:12px;
