@@ -215,31 +215,51 @@ border-radius:14px;
 box-shadow:0 0 40px rgba(0,0,0,0.8);
 }
 
+/* tombol viewer diperbaiki */
+
 .viewer-prev,
 .viewer-next{
 position:absolute;
 top:50%;
 transform:translateY(-50%);
-background:rgba(0,0,0,0.5);
-color:white;
+background:rgba(212,175,55,0.9);
+color:#0b1c3d;
 border:none;
-font-size:40px;
-padding:12px 20px;
+font-size:26px;
+padding:8px 14px;
+border-radius:10px;
 cursor:pointer;
+box-shadow:0 6px 18px rgba(0,0,0,0.4);
+transition:transform .2s ease, background .2s ease;
 }
 
-.viewer-prev{left:30px;}
-.viewer-next{right:30px;}
+.viewer-prev{left:20px;}
+.viewer-next{right:20px;}
+
+.viewer-prev:hover,
+.viewer-next:hover{
+transform:translateY(-50%) scale(1.08);
+background:#e8c860;
+}
 
 .close-btn{
 position:absolute;
-top:25px;
-right:35px;
-font-size:28px;
-background:none;
+top:22px;
+right:28px;
+font-size:22px;
+background:rgba(212,175,55,0.9);
+color:#0b1c3d;
 border:none;
-color:white;
+border-radius:10px;
+padding:6px 12px;
 cursor:pointer;
+box-shadow:0 6px 18px rgba(0,0,0,0.4);
+transition:transform .2s ease, background .2s ease;
+}
+
+.close-btn:hover{
+transform:scale(1.1);
+background:#e8c860;
 }
 
 img{
@@ -257,7 +277,25 @@ scroll-snap-type:y proximity;
 
 section{
 scroll-snap-align:start;
-margin-top:120px;
 margin-top:150px;
 scroll-margin-top:120px;
+}
+
+img{
+user-select:none;
+-webkit-user-drag:none;
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+}
+
+.grid img,
+.grid2 img,
+.grid4 img,
+.cast-grid img,
+.banner img,
+.card img{
+user-select:none;
+-webkit-user-drag:none;
+pointer-events:auto;
 }
