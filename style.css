@@ -417,14 +417,15 @@ margin:40px auto;
 max-width:160px;
 }
 
-#poster{scroll-margin-top:200px;}
+#poster{scroll-margin-top:370px;}
 
 #cast,
 #sinopsis,
 #prakata,
 #episode{
-scroll-margin-top:170px;
+scroll-margin-top:110px;
 }
 
 }
+
 
