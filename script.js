@@ -8,16 +8,31 @@ document.querySelectorAll(".card img, .grid img, .cast-grid img").forEach(img=>{
 img.addEventListener("click",()=>{
 viewer.style.display="flex";
 viewerImg.src = img.src;
+
+setTimeout(()=>{
+viewer.classList.add("show");
+},10);
+
 });
 });
 
 closeBtn.onclick=()=>{
+viewer.classList.remove("show");
+
+setTimeout(()=>{
 viewer.style.display="none";
+},200);
 };
 
 viewer.onclick=(e)=>{
 if(e.target===viewer){
+
+viewer.classList.remove("show");
+
+setTimeout(()=>{
 viewer.style.display="none";
+},200);
+
 }
 };
 
