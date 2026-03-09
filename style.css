@@ -81,8 +81,12 @@ filter:blur(0);
 }
 
 .card img:hover{
-transform:scale(1.05);
+transform:translateY(0) scale(1.05);
 box-shadow:0 18px 45px rgba(0,0,0,0.7);
+}
+
+.card img:active{
+transform:translateY(0) scale(1.08);
 }
 
 .cast-grid{
@@ -111,6 +115,14 @@ opacity:1;
 transform:translateY(0) scale(1);
 }
 
+.cast-grid img:hover{
+transform:translateY(0) scale(1.05);
+}
+
+.cast-grid img:active{
+transform:translateY(0) scale(1.08);
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -129,12 +141,27 @@ box-shadow:0 12px 35px rgba(0,0,0,0.6);
 
 opacity:0;
 transform:translateY(70px) scale(.97);
-transition:opacity .8s ease, transform .8s ease;
+filter:blur(4px);
+
+transition:
+opacity .6s ease,
+transform .6s ease,
+filter .6s ease,
+box-shadow .3s ease;
 }
 
 .grid img.show{
 opacity:1;
 transform:translateY(0) scale(1);
+filter:blur(0);
+}
+
+.grid img:hover{
+transform:translateY(0) scale(1.05);
+}
+
+.grid img:active{
+transform:translateY(0) scale(1.08);
 }
 
 .episode-grid{
@@ -293,7 +320,7 @@ scroll-margin-top:270px;
 }
 
 #cast{
-scroll-margin-top: 20px;
+scroll-margin-top:20px;
 }
 
 #sinopsis,
@@ -301,6 +328,7 @@ scroll-margin-top: 20px;
 #episode{
 scroll-margin-top:40px;
 }
+
 .section-ornament{
 position:relative;
 text-align:center;
@@ -332,24 +360,6 @@ background:#d4af37;
 
 .section-ornament::before{left:0;width:23%;}
 .section-ornament::after{right:0;width:23%;}
-
-body::before,
-body::after{
-content:"";
-position:fixed;
-top:0;
-height:100vh;
-width:160px;
-pointer-events:none;
-z-index:2;
-background:
-radial-gradient(120px 200px at 0% 20%, rgba(212,175,55,0.65), transparent 80%),
-radial-gradient(120px 200px at 0% 60%, rgba(212,175,55,0.65), transparent 80%),
-radial-gradient(120px 200px at 0% 100%, rgba(212,175,55,0.65), transparent 80%);
-}
-
-body::before{left:-40px;}
-body::after{right:-40px;transform:scaleX(-1);}
 
 img{
 user-select:none;
@@ -407,20 +417,13 @@ margin:40px auto;
 max-width:160px;
 }
 
-#poster{scroll-margin-top:370px;}
+#poster{scroll-margin-top:200px;}
+
 #cast,
 #sinopsis,
 #prakata,
 #episode{
-scroll-margin-top:110px;
-}
-
-body::before,
-body::after{
-width:80px;
+scroll-margin-top:170px;
 }
 
 }
-
-
-
