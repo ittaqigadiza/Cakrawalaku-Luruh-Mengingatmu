@@ -424,12 +424,16 @@ scroll-margin-top:90px;
 }
 
 #sinopsis,
-#prakata,
 #episode{
 scroll-margin-top:150px;
 }
 
+#prakata{
+scroll-margin-top:200px:
 }
+
+}
+
 
 
 
