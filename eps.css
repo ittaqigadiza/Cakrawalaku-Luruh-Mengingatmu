@@ -302,14 +302,11 @@ border-radius:14px;
 .viewer-next{
 top:auto;
 bottom:30px;
-transform:translateY(0) scale(1);
 font-size:24px;
 padding:12px 16px;
 background:rgba(212,175,55,0.95);
 color:#0b1c3d;
 border-radius:12px;
-transition:transform .08s ease;
--webkit-tap-highlight-color:transparent;
 }
 
 .viewer-prev{
@@ -318,11 +315,6 @@ left:25px;
 
 .viewer-next{
 right:25px;
-}
-
-.viewer-prev:active,
-.viewer-next:active{
-transform:translateY(3px) scale(.96);
 }
 
 .close-btn{
@@ -337,6 +329,7 @@ align-items:center;
 }
 
 }
+
 
 
 
