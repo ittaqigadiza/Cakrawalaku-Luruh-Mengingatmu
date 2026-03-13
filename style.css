@@ -8,105 +8,25 @@
 body {
     margin: 0;
     font-family: "Crimson Text", serif;
+    background: 
+        radial-gradient(circle at 20% 10%, rgba(236, 202, 91, 0.18), transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.12), transparent 50%),
+        radial-gradient(circle at 5% 95%, rgba(236, 202, 91, 0.1), transparent 40%),
+        #04163a;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
-    background: #0a1020;  /* dark blue base */
     position: relative;
-    min-height: 100vh;
 }
 
-/* ===== BACKGROUND ELEMENTS (di belakang konten) ===== */
-.background-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
+/* ===== TYPOGRAPHY ROYAL ===== */
+h1, h2, h3, .section-ornament, .top-menu a {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-/* Langit malam dengan gradien biru dalam */
-.bg-sky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(ellipse at 20% 30%, rgba(0, 45, 85, 0.4) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 70%, rgba(15, 30, 70, 0.4) 0%, transparent 60%),
-        radial-gradient(ellipse at 40% 50%, rgba(5, 20, 60, 0.3) 0%, transparent 70%),
-        #0a1020;
-    z-index: 1;
-}
-
-/* Bintang halus bertebaran */
-.stars-classy {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(1px 1px at 8% 12%, rgba(255, 240, 180, 0.5), transparent),
-        radial-gradient(1.5px 1.5px at 17% 45%, rgba(212, 175, 55, 0.4), transparent),
-        radial-gradient(1px 1px at 23% 78%, rgba(255, 250, 210, 0.5), transparent),
-        radial-gradient(2px 2px at 31% 22%, rgba(212, 175, 55, 0.4), transparent),
-        radial-gradient(1px 1px at 42% 63%, rgba(240, 220, 150, 0.5), transparent),
-        radial-gradient(1.5px 1.5px at 54% 37%, rgba(212, 175, 55, 0.4), transparent),
-        radial-gradient(1px 1px at 63% 81%, rgba(255, 245, 180, 0.5), transparent),
-        radial-gradient(2px 2px at 71% 15%, rgba(212, 175, 55, 0.4), transparent),
-        radial-gradient(1px 1px at 79% 52%, rgba(250, 235, 170, 0.5), transparent),
-        radial-gradient(1.5px 1.5px at 86% 33%, rgba(212, 175, 55, 0.4), transparent),
-        radial-gradient(1px 1px at 92% 67%, rgba(255, 245, 190, 0.5), transparent),
-        radial-gradient(2px 2px at 14% 92%, rgba(212, 175, 55, 0.4), transparent),
-        radial-gradient(1px 1px at 48% 18%, rgba(255, 240, 170, 0.5), transparent),
-        radial-gradient(1.5px 1.5px at 67% 73%, rgba(212, 175, 55, 0.4), transparent),
-        radial-gradient(1px 1px at 94% 44%, rgba(250, 235, 180, 0.5), transparent);
-    background-repeat: repeat;
-    opacity: 0.4;
-    z-index: 2;
-    animation: starsTwinkle 10s infinite alternate ease-in-out;
-}
-
-@keyframes starsTwinkle {
-    0% { opacity: 0.3; }
-    50% { opacity: 0.5; }
-    100% { opacity: 0.4; }
-}
-
-/* Glow dinamis biru-emas */
-.glow-classy {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 25% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 70% 65%, rgba(0, 70, 130, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 45% 75%, rgba(212, 175, 55, 0.06) 0%, transparent 55%),
-        radial-gradient(circle at 80% 25%, rgba(0, 60, 120, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 15% 85%, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
-    z-index: 2;
-    animation: glowMove 18s infinite alternate ease-in-out;
-}
-
-@keyframes glowMove {
-    0% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.08); }
-    100% { opacity: 0.5; transform: scale(1); }
-}
-
-/* ===== KONTEN UTAMA (di atas background) ===== */
-.top-menu, header, .container, footer {
-    position: relative;
-    z-index: 10;
-}
-
-/* ===== TOP MENU ELEGAN ===== */
+/* ===== TOP MENU ===== */
 .top-menu {
     position: sticky;
     top: 0;
@@ -116,24 +36,23 @@ body {
     flex-wrap: wrap;
     gap: 3.5rem;
     padding: 1.2rem 2rem;
-    background: rgba(10, 16, 32, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-    z-index: 100;
+    background: rgba(11, 28, 61, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .top-menu a {
     color: #d4af37;
     text-decoration: none;
-    font-family: "Playfair Display", serif;
     font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-weight: 600;
     padding: 0.5rem 0;
     position: relative;
     transition: all 0.3s ease;
-    opacity: 0.9;
+    letter-spacing: 1px;
 }
 
 .top-menu a::after {
@@ -143,13 +62,13 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 1px;
+    height: 2px;
     background: #d4af37;
     transition: width 0.3s ease;
 }
 
 .top-menu a:hover {
-    opacity: 1;
+    color: #fff2a8;
     transform: translateY(-2px);
 }
 
@@ -162,17 +81,20 @@ header {
     text-align: center;
     padding: 5rem 1.5rem 3rem;
     position: relative;
+    z-index: 10;
 }
 
-header::after {
-    content: "";
+header::before {
+    content: '“';
     position: absolute;
-    bottom: 1rem;
+    top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+    font-size: 8rem;
+    color: rgba(212, 175, 55, 0.1);
+    font-family: "Playfair Display", serif;
+    pointer-events: none;
+    z-index: 0;
 }
 
 header h1 {
@@ -180,12 +102,13 @@ header h1 {
     color: #d4af37;
     font-size: 3.2rem;
     margin: 0;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    position: relative;
+    z-index: 1;
+    line-height: 1.3;
     opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(-60px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 header h1.show {
@@ -194,13 +117,15 @@ header h1.show {
 }
 
 .author {
-    color: #e6d5a8;
+    color: #e6c76b;
     margin-top: 0.8rem;
     font-size: 1.3rem;
     font-style: italic;
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-40px);
     transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+    position: relative;
+    z-index: 1;
 }
 
 .author.show {
@@ -208,21 +133,26 @@ header h1.show {
     transform: translateY(0);
 }
 
-/* ===== QUOTE ELEGAN ===== */
+/* ===== QUOTE ===== */
 .quote {
-    color: #e0e5ec;
-    margin: 2.5rem auto 0;
+    color: #b8d0e0;
+    margin: 2rem auto 0;
     font-style: italic;
-    max-width: 650px;
-    line-height: 1.8;
+    max-width: 600px;
+    line-height: 1.7;
     text-align: center;
     font-size: 1.2rem;
-    padding: 1.5rem 2.5rem;
-    border-left: 2px solid rgba(212, 175, 55, 0.3);
-    border-right: 2px solid rgba(212, 175, 55, 0.3);
+    padding: 1.5rem 2rem;
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 30px;
+    border-left: 3px solid #d4af37;
+    border-right: 3px solid #d4af37;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
     transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+    position: relative;
+    z-index: 10;
 }
 
 .quote.show {
@@ -234,84 +164,65 @@ header h1.show {
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 10;
 }
 
 /* ===== SECTION ORNAMENT ===== */
 .section-ornament {
+    position: relative;
     text-align: center;
     font-family: "Playfair Display", serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #d4af37;
-    margin: 6rem 0 3rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 3rem;
+    margin: 6rem 0 3.5rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
     opacity: 0;
-    transform: translateX(-50%) translateY(-30px);
+    transform: translateY(-50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-    .section-ornament {
-        font-size: 1.8rem;
-        padding: 0 2rem;
-        white-space: normal;
-    }
+    z-index: 10;
 }
 
 .section-ornament.show {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 
 .section-ornament::before,
 .section-ornament::after {
-    content: "◈";
+    content: "✦";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1rem;
-    color: rgba(212, 175, 55, 0.5);
+    font-size: 1.8rem;
+    color: #d4af37;
+    opacity: 0.6;
 }
 
 .section-ornament::before {
-    left: 0;
+    left: 20%;
 }
 
 .section-ornament::after {
-    right: 0;
+    right: 20%;
 }
 
-/* ===== CARD IMAGES ===== */
+@media (max-width: 768px) {
+    .section-ornament::before,
+    .section-ornament::after {
+        display: none;
+    }
+}
+
+/* ===== CARD & IMAGE BASE ===== */
 .card {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 80%);
-    filter: blur(20px);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.card:hover::before {
-    opacity: 0.8;
+    z-index: 10;
 }
 
 .card img, .grid img, .cast-grid img {
@@ -319,12 +230,12 @@ header h1.show {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.2, 0.9, 0.3, 1);
     opacity: 0;
-    transform: translateY(40px) scale(0.98);
-    filter: blur(2px);
+    transform: translateY(70px) scale(0.97);
+    filter: blur(8px);
 }
 
 .card img.show, .grid img.show, .cast-grid img.show {
@@ -335,14 +246,20 @@ header h1.show {
 
 .card img:hover, .grid img:hover, .cast-grid img:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 175, 55, 0.3);
-    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.3);
+    border-color: rgba(212, 175, 55, 0.6);
 }
 
-/* ===== POSTER ===== */
+/* ===== POSTER KHUSUS ===== */
 #poster.card img {
     max-width: 500px;
-    border-radius: 24px;
+    border-radius: 25px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+#poster.card img:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 40px 70px rgba(212, 175, 55, 0.4), 0 0 0 3px #d4af37;
 }
 
 /* ===== CAST GRID ===== */
@@ -352,28 +269,32 @@ header h1.show {
     gap: 2rem;
     max-width: 650px;
     margin: 0 auto 3rem;
+    position: relative;
+    z-index: 10;
 }
 
 .cast-grid img {
     max-width: 280px;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
-/* ===== GRID ===== */
+/* ===== GRID (SINOPSIS & PRAKATA) ===== */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     max-width: 800px;
     margin: 0 auto 4rem;
+    position: relative;
+    z-index: 10;
 }
 
 .grid img {
     max-width: 350px;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
-/* ===== EPISODE GRID ===== */
+/* ===== EPISODE GRID - 25 EPS SAKRAL ===== */
 .episode-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -381,6 +302,8 @@ header h1.show {
     max-width: 1300px;
     margin: 4rem auto;
     justify-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .episode-card {
@@ -393,38 +316,21 @@ header h1.show {
     align-items: center;
     max-width: 200px;
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    position: relative;
+    transform: translateY(60px) scale(0.96);
+    filter: blur(5px);
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
 }
 
 .episode-card.show {
     opacity: 1;
-    transform: translateY(0);
-}
-
-.episode-card::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.04) 0%, transparent 80%);
-    border-radius: 30px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.episode-card:hover::before {
-    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
 }
 
 .episode-card img {
     width: 100%;
-    border-radius: 18px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 22px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(212, 175, 55, 0.2);
     transition: all 0.4s ease;
     aspect-ratio: 1 / 1.2;
@@ -432,36 +338,43 @@ header h1.show {
 }
 
 .episode-card:hover img {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 175, 55, 0.3);
-    border-color: rgba(212, 175, 55, 0.4);
+    transform: scale(1.08) translateY(-8px);
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.4);
+    border-color: #d4af37;
 }
 
 .episode-title {
     margin-top: 1rem;
     font-size: 0.95rem;
-    color: #e6d5a8;
+    font-weight: 600;
+    color: #e6c76b;
     line-height: 1.4;
+    padding: 0 0.3rem;
     transition: color 0.3s ease;
 }
 
 .episode-card:hover .episode-title {
-    color: #d4af37;
+    color: #fff2a8;
 }
 
-/* ===== SOON PLACEHOLDER ===== */
+/* ===== SOON PLACEHOLDER - TAPI TETEP ELEGAN ===== */
 .episode-card img[src*="soon.png"] {
-    opacity: 0.8;
-    filter: grayscale(20%);
+    opacity: 0.9;
+    filter: grayscale(30%);
+    position: relative;
+}
+
+.episode-card img[src*="soon.png"]:hover {
+    filter: grayscale(10%);
+    transform: scale(1.08) translateY(-8px);
 }
 
 .episode-card img[src*="soon.png"] + .episode-title::after {
-    content: " — segera";
+    content: " (segera)";
     font-size: 0.8rem;
-    color: rgba(212, 175, 55, 0.7);
+    color: #d4af37;
     font-style: italic;
-    display: block;
-    margin-top: 4px;
+    opacity: 0.8;
 }
 
 /* ===== FOOTER ===== */
@@ -469,23 +382,24 @@ footer {
     text-align: center;
     color: #d4af37;
     padding: 3rem 1.5rem 2rem;
+    opacity: 0.8;
     font-size: 1.1rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-    margin-top: 4rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    margin-top: 3rem;
     position: relative;
+    z-index: 10;
 }
 
 footer::before {
-    content: "◈ ◈ ◈";
+    content: "✦";
     position: absolute;
-    top: -0.7rem;
+    top: -0.8rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1rem;
-    background: #0a1020;
-    padding: 0 1.5rem;
-    color: rgba(212, 175, 55, 0.5);
-    letter-spacing: 8px;
+    font-size: 1.5rem;
+    background: #04163a;
+    padding: 0 1rem;
+    color: #d4af37;
 }
 
 /* ===== IMAGE VIEWER ===== */
@@ -496,7 +410,7 @@ footer::before {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
     display: none;
     align-items: center;
     justify-content: center;
@@ -512,10 +426,10 @@ footer::before {
 .viewer img {
     max-width: 90vw;
     max-height: 85vh;
-    border-radius: 16px;
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
-    transform: scale(0.95);
+    border-radius: 20px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+    transform: scale(0.9);
     transition: transform 0.3s ease;
 }
 
@@ -527,14 +441,16 @@ footer::before {
     position: absolute;
     top: 2rem;
     right: 2.5rem;
-    background: transparent;
-    color: #d4af37;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: #d4af37;
+    color: #04163a;
+    border: none;
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
     z-index: 10000;
     display: flex;
@@ -543,9 +459,8 @@ footer::before {
 }
 
 #viewer-close:hover {
-    background: rgba(212, 175, 55, 0.1);
-    border-color: rgba(212, 175, 55, 0.6);
-    transform: rotate(90deg);
+    background: #fff2a8;
+    transform: rotate(90deg) scale(1.1);
 }
 
 /* ===== PROTECT CONTENT ===== */
@@ -559,31 +474,13 @@ img {
 }
 
 /* ===== SCROLL MARGIN ===== */
-#poster { scroll-margin-top: 250px; }
-#cast { scroll-margin-top: 50px; }
-#sinopsis { scroll-margin-top: 70px; }
-#prakata { scroll-margin-top: 70px; }
-#episode { scroll-margin-top: 70px; }
+#poster { scroll-margin-top: 280px; }
+#cast { scroll-margin-top: 40px; }
+#sinopsis { scroll-margin-top: 60px; }
+#prakata { scroll-margin-top: 60px; }
+#episode { scroll-margin-top: 60px; }
 
-/* ===== SCROLLBAR HALUS ===== */
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: #0a1020;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(212, 175, 55, 0.3);
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(212, 175, 55, 0.5);
-}
-
-/* ===== MEDIA QUERIES ===== */
+/* ===== MEDIA QUERIES - MOBILE ===== */
 @media (max-width: 1024px) {
     .episode-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -592,9 +489,13 @@ img {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
     .top-menu {
         gap: 1.2rem;
-        padding: 1rem;
+        padding: 0.8rem 0.5rem;
     }
     
     .top-menu a {
@@ -611,12 +512,12 @@ img {
     
     .quote {
         font-size: 1rem;
-        padding: 1.2rem 1.5rem;
+        padding: 1rem 1.2rem;
     }
     
     .section-ornament {
-        font-size: 1.5rem;
-        padding: 0 1.5rem;
+        font-size: 1.8rem;
+        margin: 4rem 0 2.5rem;
     }
     
     .cast-grid {
@@ -637,6 +538,10 @@ img {
         max-width: 160px;
     }
     
+    .episode-title {
+        font-size: 0.85rem;
+    }
+    
     #poster.card img {
         max-width: 100%;
     }
@@ -649,7 +554,13 @@ img {
     #viewer-close {
         top: 1rem;
         right: 1rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 1.5rem;
     }
+    
+    #poster { scroll-margin-top: 320px; }
+    #cast { scroll-margin-top: 90px; }
 }
 
 @media (max-width: 480px) {
@@ -664,10 +575,134 @@ img {
     
     .cast-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .top-menu {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+    
+    .top-menu a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
     }
 }
 
-/* ===== SMOOTH SCROLL ===== */
+/* ===== ANIMASI SMOOTH ===== */
 html {
     scroll-behavior: smooth;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b1c3d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 10px;
+    border: 2px solid #0b1c3d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff2a8;
+}
+
+/* ===== TAMBAHAN EFEK KANJENG RATU ===== */
+/* Langit malam emas berkilauan + partikel + glow dinamis + efek istana */
+/* GAK MENGUBAH APAPUN, HANYA NAMBAH DI BACKGROUND */
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: 
+        /* 1. LANGIT MALAM EMAS BERKILAUAN */
+        radial-gradient(ellipse at 20% 30%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(0, 50, 100, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 40% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 45%),
+        radial-gradient(ellipse at 90% 40%, rgba(0, 40, 90, 0.2) 0%, transparent 55%),
+        radial-gradient(ellipse at 10% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+        
+        /* 2. PARTIKEL BERTEBARAN (BINTANG) */
+        radial-gradient(1px 1px at 7% 12%, rgba(255, 215, 0, 0.8), transparent),
+        radial-gradient(1.5px 1.5px at 15% 42%, rgba(212, 175, 55, 0.7), transparent),
+        radial-gradient(1px 1px at 22% 68%, rgba(255, 225, 100, 0.8), transparent),
+        radial-gradient(2px 2px at 30% 25%, rgba(212, 175, 55, 0.7), transparent),
+        radial-gradient(1px 1px at 38% 82%, rgba(255, 235, 120, 0.8), transparent),
+        radial-gradient(1.5px 1.5px at 45% 35%, rgba(212, 175, 55, 0.7), transparent),
+        radial-gradient(1px 1px at 53% 58%, rgba(255, 245, 140, 0.8), transparent),
+        radial-gradient(2px 2px at 60% 18%, rgba(212, 175, 55, 0.7), transparent),
+        radial-gradient(1px 1px at 68% 73%, rgba(255, 225, 100, 0.8), transparent),
+        radial-gradient(1.5px 1.5px at 75% 45%, rgba(212, 175, 55, 0.7), transparent),
+        radial-gradient(1px 1px at 83% 28%, rgba(255, 235, 120, 0.8), transparent),
+        radial-gradient(2px 2px at 90% 63%, rgba(212, 175, 55, 0.7), transparent),
+        radial-gradient(1px 1px at 95% 88%, rgba(255, 245, 140, 0.8), transparent),
+        
+        /* 3. EFEK ISTANA KERAJAAN */
+        repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.03) 0px, rgba(212, 175, 55, 0.03) 3px, transparent 3px, transparent 15px),
+        repeating-linear-gradient(135deg, rgba(212, 175, 55, 0.02) 0px, rgba(212, 175, 55, 0.02) 2px, transparent 2px, transparent 20px);
+    
+    /* 4. GLOW DINAMIS (animasi terpisah) */
+    animation: royalEffects 12s infinite alternate ease-in-out;
+}
+
+@keyframes royalEffects {
+    0% {
+        opacity: 0.5;
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 
+                            0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 
+                            0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 
+                            0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+    100% {
+        opacity: 0.9;
+        background-position: 2% 3%, 3% 2%, 1% 4%, 4% 1%, 2% 2%,
+                            0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+                            0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+                            0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+/* Tambahan glow ekstra yang bergerak */
+.glow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(212, 175, 55, 0.1) 0%, transparent 45%),
+        radial-gradient(circle at 70% 60%, rgba(0, 70, 140, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 45% 75%, rgba(212, 175, 55, 0.08) 0%, transparent 55%);
+    animation: glowMove 15s infinite alternate;
+}
+
+@keyframes glowMove {
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+    100% { opacity: 0.4; transform: scale(1); }
+}
+
+/* Pastikan konten di atas efek */
+.top-menu, header, .container, footer, .viewer {
+    position: relative;
+    z-index: 100;
+}
+
+.card, .cast-grid, .grid, .episode-grid {
+    position: relative;
+    z-index: 100;
 }
